@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { categories } from "../data/categories";
 
 export default function Form() {
+  const [category, setCategory] = useState("");
+  const [activity, setActivity] = useState("");
+  const [calories, setCalories] = useState(0);
+
   return (
-    <form className="space-y-5udemy bg-white shadow p-10 rounded-lg">
+    <form className="space-y-5 bg-white shadow p-10 rounded-lg">
       <div className="grid grid-cols-1 gap-3">
         <label htmlFor="category" className="font-bold">
           Categoría:
@@ -44,6 +49,7 @@ export default function Form() {
       <input
         type="submit"
         className="bg bg-gray-800 hover:bg-gray-900 w-full p-2 font-bold uppercase text-white cursor-pointer"
+        value={"Guardar comida o guardar ejercicio"}
       />
     </form>
   );

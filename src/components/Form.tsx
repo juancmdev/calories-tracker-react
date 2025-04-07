@@ -8,6 +8,11 @@ export default function Form() {
     calories: 0,
   });
 
+  const handleChange = () => {
+    console.log("handleChange");
+    // Aquí puedes manejar el cambio de los inputs
+  };
+
   return (
     <form className="space-y-5 bg-white shadow p-10 rounded-lg">
       <div className="grid grid-cols-1 gap-3">
@@ -18,6 +23,7 @@ export default function Form() {
           className="border border-slate-300 p-2 rounded-lg w-full bg-white"
           id="category"
           value={activity.category}
+          onChange={handleChange}
         >
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
@@ -37,6 +43,7 @@ export default function Form() {
           className="border border-slate-300 p-2 rounded-lg"
           placeholder="Ej. Comida, Jugo de Naranja, Ensalada, Ejercicio, pesas, bicicleta"
           value={activity.name}
+          onChange={handleChange}
         />
       </div>
       <div className="grid grid-cols-1 gap-3">
@@ -49,6 +56,7 @@ export default function Form() {
           className="border border-slate-300 p-2 rounded-lg"
           placeholder="Calorías. Ej. 200, 300, 400"
           value={activity.calories}
+          onChange={handleChange}
         />
       </div>
       <input

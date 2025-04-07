@@ -36,6 +36,7 @@ export default function Form() {
           type="text"
           className="border border-slate-300 p-2 rounded-lg"
           placeholder="Ej. Comida, Jugo de Naranja, Ensalada, Ejercicio, pesas, bicicleta"
+          value={activity.name}
         />
       </div>
       <div className="grid grid-cols-1 gap-3">
@@ -47,6 +48,7 @@ export default function Form() {
           type="number"
           className="border border-slate-300 p-2 rounded-lg"
           placeholder="Calorías. Ej. 200, 300, 400"
+          value={activity.calories}
         />
       </div>
       <input

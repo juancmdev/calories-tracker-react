@@ -3,14 +3,16 @@ import { categories } from "../data/categories";
 
 export default function Form() {
   const [activity, setActivity] = useState({
-    category: "",
+    category: 1,
     name: "",
     calories: 0,
   });
 
-  const handleChange = () => {
-    console.log("handleChange");
-    // Aquí puedes manejar el cambio de los inputs
+  const handleChange = (e) => {
+    setActivity({
+      ...activity,
+      [e.target.id]: e.target.value,
+    });
   };
 
   return (
@@ -47,11 +49,11 @@ export default function Form() {
         />
       </div>
       <div className="grid grid-cols-1 gap-3">
-        <label htmlFor="Calories" className="font-bold">
+        <label htmlFor="calories" className="font-bold">
           Calorías:
         </label>
         <input
-          id="Calories"
+          id="calories"
           type="number"
           className="border border-slate-300 p-2 rounded-lg"
           placeholder="Calorías. Ej. 200, 300, 400"

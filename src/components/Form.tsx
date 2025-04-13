@@ -8,7 +8,11 @@ export default function Form() {
     calories: 0,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setActivity({
       ...activity,
       [e.target.id]: e.target.value,

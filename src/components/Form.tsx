@@ -79,7 +79,7 @@ export default function Form() {
       <input
         type="submit"
         className="bg bg-gray-800 hover:bg-gray-900 w-full p-2 font-bold uppercase text-white cursor-pointer disabled:opacity-10"
-        value={"Guardar comida o guardar ejercicio"}
+        value={activity.category === 1 ? "Guardar comida" : "Guardar Ejercicio"}
         disabled={!isValidactivity()}
       />
     </form>

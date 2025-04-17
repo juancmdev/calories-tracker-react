@@ -1,6 +1,10 @@
+import { Activity } from "../types";
+
 export type ActivityActions = {};
 
-type ActivityState = {};
+type ActivityState = {
+  activities: Activity[];
+};
 
 export const initialState = {};
 

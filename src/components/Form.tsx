@@ -39,6 +39,12 @@ export default function Form({ dispatch }: FormProps) {
       type: "save-activity",
       payload: { newActivity: activity },
     });
+
+    setActivity({
+      category: 1,
+      name: "",
+      calories: 0,
+    });
   };
 
   return (

@@ -6,6 +6,11 @@ type ActivityState = {
   activities: Activity[];
 };
 
-export const initialState = {};
+export const initialState: ActivityState = {
+  activities: [],
+};
 
-export const activityReducer = () => {};
+export const activityReducer = (
+  state: ActivityState = initialState,
+  action: ActivityActions
+) => {};

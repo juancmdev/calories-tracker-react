@@ -25,8 +25,6 @@ export default function Form() {
 
   const isValidactivity = () => {
     const { name, calories } = activity;
-    console.log(name.trim() !== "" && calories > 0);
-
     return name.trim() !== "" && calories > 0;
   };
 

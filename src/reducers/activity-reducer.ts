@@ -7,10 +7,12 @@ export type ActivityActions = {
 
 type ActivityState = {
   activities: Activity[];
+  activeId: Activity["id"];
 };
 
 export const initialState: ActivityState = {
   activities: [],
+  activeId: "",
 };
 
 export const activityReducer = (
